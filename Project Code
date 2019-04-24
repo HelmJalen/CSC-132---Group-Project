@@ -1,5 +1,110 @@
 ######################################################################################################################
-# Name: 
-# Date: 
-# Description: 
+# Name:Broady Rivet, Jordan Burchfield
+# Date:
+# Description:
 ######################################################################################################################
+# task one Create an organized gui for main fullscreen
+import pygame
+import time
+import random
+
+#measurments of window
+display_width = 800
+display_height = 600
+
+#set all your colors needed
+black = (0, 0, 0)
+white = (255, 255, 255)
+red = (128, 0, 0)
+green = (0, 128, 0)
+bright_green = (50, 255, 50)
+bright_red = (255, 50, 50)
+
+pygame.init()
+gameDisplay = pygame.display.set_mode((800, 600))
+pygame.display.set_caption('Pi Time')
+clock = pygame.time.Clock()
+
+def thingy(thingx, thingy, thingw, thingh, color):
+    pygame.draw.rect(gameDisplay, color, [thingx, thingy, thingw, thingh])
+
+#set text color (main title)
+def text_object(text, font):
+    textSurface = font.render(text, True, white)
+    return textSurface, textSurface.get_rect()
+
+#set text color (everythig else)
+def text_objects(text, font):
+    textSurface = font.render(text, True, black)
+    return textSurface, textSurface.get_rect()
+
+#display settings
+def message_display(text):
+    largeText = pygame.font.Font('freesansbold.ttf',115)
+    TextSurf, TextRect = text_object(text, largeText)
+    TextRect.center = ((display_width/2),(display_height/2))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    pygame.display.update()
+
+    time.sleep(2)
+
+    game_loop()
+
+#all settings for main two buttons
+def button(msg, x, y, w, h, ic, ac, action=None):
+    mouse = pygame.mouse.get_pos()
+    click = pygame.mouse.get_pressed()
+    print(click)
+
+    if x+w > mouse[0] > x and y+h > mouse[1] > y:
+        pygame.draw.rect(gameDisplay, ac, (x, y, w, h))
+        if click[0] == 1 and action != None:
+            if action == "play":
+                game_loop()
+            elif action == "quit":
+                pygame.quit()
+                quit()
+    else:
+        pygame.draw.rect(gameDisplay, ic, (x, y, w, h))
+    if x+w > mouse[0] > x and y+h > mouse[1] > y:
+        pygame.draw.rect(gameDisplay, ac, (x, y, w, h))
+        if click[0] == 1:
+            quit()
+    else:
+        pygame.draw.rect(gameDisplay, ic, (x, y, w, h))
+
+    smallText = pygame.font.Font("freesansbold.ttf",20)
+    textSurf, textRect = text_objects("Start", smallText)
+    textRect.center = ( (200+(100/2)), (375+(50/2)) )
+    gameDisplay.blit(textSurf, textRect)
+
+    smallText = pygame.font.Font("freesansbold.ttf",20)
+    textSurf, textRect = text_objects("Quit", smallText)
+    textRect.center = ( (500+(100/2)), (375+(50/2)) )
+    gameDisplay.blit(textSurf, textRect)
+def game_intro():
+    intro = True
+
+    while intro:
+        for event in pygame.event.get():
+            print(event)
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+        gameDisplay.fill(black)
+        largeText = pygame.font.Font('freesansbold.ttf',115)
+        TextSurf, TextRect = text_object("Pi Time", largeText)
+        TextRect.center = ((display_width/2),(display_height/3))
+        gameDisplay.blit(TextSurf, TextRect)
+
+        button("Start", 200, 375, 100, 50, green, bright_green, "play")
+        button("Quit", 500, 375, 100, 50, red, bright_red, "quit")
+
+        pygame.display.update()
+        clock.tick(15)
+
+game_intro()
+pygame.quit()
+quit()
