@@ -1,5 +1,5 @@
 ######################################################################################################################
-# Name:Broady Rivet, Jordan Burchfield
+# Name:Broady Rivet, Jordan Burchfield, Jalen Helm, Mariela A.
 # Date:
 # Description:
 ######################################################################################################################
@@ -10,7 +10,7 @@ import random
 
 #measurments of window
 display_width = 800
-display_height = 600
+display_height = 480
 
 #set all your colors needed
 black = (0, 0, 0)
@@ -21,7 +21,7 @@ bright_green = (50, 255, 50)
 bright_red = (255, 50, 50)
 
 pygame.init()
-gameDisplay = pygame.display.set_mode((800, 600))
+gameDisplay = pygame.display.set_mode((800, 480))
 pygame.display.set_caption('Pi Time')
 clock = pygame.time.Clock()
 
