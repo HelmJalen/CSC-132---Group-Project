@@ -1,4 +1,5 @@
-Category 1 - History  									(I put a * next to each answer)
+Category 1 - History  							(I put a * next to each answer)
+									I included fun facts in case we want to use them for something
 
 	Question 1: In which decade did Hong Kong revert from British rule?
 		A. 1940
@@ -11,28 +12,28 @@ Category 1 - History  									(I put a * next to each answer)
 		C. 5
 		D. 4
 	Question 3: What nationality was Karl Marx?
-		A. Atlantean
-		B. German
+		A. German*
+		B. Neptunian
 		C. Russian
-		D. 
-	Question 4: 
-		A.
-		B.
-		C.
-		D.
-	Question 5: 
-		A.
-		B.
-		C.
-		D.
+		D. Italian
+	Question 4: In which year was the Wall Street Crash?
+		A. 1931
+		B. 1925
+		C. 1937
+		D. 1929*
+	Question 5: In which French city was Joan of Arc put to death?
+		A. Nîmes
+		B. Nantes
+		C. Paris
+		D. Rouen*
 
-Category 2 - 
+Category 2 - Science
 
-	Question 1: 
-		A. 
-		B. 
-		C. 
-		D. 
+	Question 1: Which is the rarest blood type in humans?
+		A. AB-* 	(Fun fact: AB negative is the rarest blood type accounting for just 1% of the donor population.)
+		B. O+
+		C. B+
+		D. A-
 	Question 2: 
 		A.
 		B.
