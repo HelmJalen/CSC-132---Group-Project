@@ -1,0 +1,5 @@
+Which European country has the longest coastline?
+	A. Finland
+	B. United Kingdom
+	C. Sweden
+	D. Norway*
