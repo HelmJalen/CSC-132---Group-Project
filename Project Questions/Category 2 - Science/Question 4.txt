@@ -1,5 +1,0 @@
-Obsidian is what type of rock?
-	A. Igneous
-	B. Sedimentary
-	C. Metamorphic
-	D. None of the above
